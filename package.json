@@ -1,7 +1,7 @@
 {
   "name": "iced-coffee-compiler",
   "main": "./lib/iced-coffee-compiler",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Quickly compile IcedCoffeeScript code in the editor to JavaScript",
   "contributors": [
     "Muhammad Fawwaz Orabi <forabi> (https://github.com/forabi)"
