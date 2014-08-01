@@ -1,5 +1,5 @@
 { EditorView } = require 'atom'
-{ compile } = require('iced-coffee-script').compile
+{ compile } = require 'iced-coffee-script'
 ids = { }
 
 module.exports =
