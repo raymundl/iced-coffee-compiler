@@ -1,21 +1,21 @@
 { EditorView } = require 'atom'
-{ compile } = require 'coffee-script'
+{ compile } = require('iced-coffee-script').compile
 ids = { }
 
 module.exports =
     activate: (state) ->
-        atom.workspaceView.command "coffee-compiler:compile", => @compile()
+        atom.workspaceView.command "iced-coffee-compiler:compile", => @compile()
     # deactivate: ->
     compile: ->
-        @coffeeEditor = atom.workspace.getActiveEditor()
-        selection = @coffeeEditor.getSelection()
-        coffee = selection.getText() || @coffeeEditor.getText()
+        @icedCoffeeEditor = atom.workspace.getActiveEditor()
+        selection = @icedCoffeeEditor.getSelection()
+        iced_coffee = selection.getText() || @icedCoffeeEditor.getText()
 
         @view = @getView()
         @editor = @view.getEditor()
 
         try
-            output = compile coffee, bare: yes
+            output = compile iced_coffee, bare: yes
             @editor.setGrammar atom.syntax.grammarForScopeName 'source.js'
         catch e
             output = e.toString()
@@ -27,8 +27,8 @@ module.exports =
             @pane.activateNextItem()
 
     getView: ->
-        ids[@coffeeEditor.id] = (
-            view = ids[@coffeeEditor.id]
+        ids[@icedCoffeeEditor.id] = (
+            view = ids[@icedCoffeeEditor.id]
             if view
                 editor = view.getEditor()
                 if not editor.isAlive() then view = new EditorView mini: yes

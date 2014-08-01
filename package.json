@@ -1,10 +1,10 @@
 {
   "name": "coffee-compiler",
-  "main": "./lib/coffee-compiler",
-  "version": "0.11.0",
-  "description": "Quickly compile CoffeeScript code in the editor to JavaScript",
+  "main": "./lib/iced-coffee-compiler",
+  "version": "0.0.1",
+  "description": "Quickly compile IcedCoffeeScript code in the editor to JavaScript",
   "activationEvents": [
-    "coffee-compiler:compile"
+    "iced-coffee-compiler:compile"
   ],
   "repository": "https://github.com/forabi/coffee-compiler",
   "license": "MIT",
@@ -12,6 +12,6 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "coffee-script": "^1.7.1"
+    "iced-coffee-script": "^1.7.1-f"
   }
 }

@@ -8,6 +8,6 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 '.platform-darwin .editor':
-  'cmd-shift-c': 'coffee-compiler:compile'
+  'cmd-shift-c': 'iced-coffee-compiler:compile'
 '.platform-win32 .editor, .platform-linux .editor':
-  'ctrl-alt-c': 'coffee-compiler:compile'
+  'ctrl-alt-c': 'iced-coffee-compiler:compile'
