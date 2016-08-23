@@ -4,7 +4,7 @@ ids = { }
 
 module.exports =
     activate: (state) ->
-        atom.workspaceView.command "iced-coffee-compiler:compile", => @compile()
+        atom.commands.add 'atom-workspace', "iced-coffee-compiler:compile": => @compile()
     # deactivate: ->
     compile: ->
         @icedCoffeeEditor = atom.workspace.getActiveEditor()
