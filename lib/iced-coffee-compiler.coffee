@@ -7,7 +7,7 @@ module.exports =
         atom.commands.add 'atom-workspace', "iced-coffee-compiler:compile": => @compile()
     # deactivate: ->
     compile: ->
-        @icedCoffeeEditor = atom.workspace.getActiveEditor()
+        @icedCoffeeEditor = atom.workspace.getActiveTextEditor()
         selection = @icedCoffeeEditor.getSelection()
         iced_coffee = selection.getText() || @icedCoffeeEditor.getText()
 
