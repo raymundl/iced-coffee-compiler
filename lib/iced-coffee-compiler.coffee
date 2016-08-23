@@ -8,7 +8,7 @@ module.exports =
     # deactivate: ->
     compile: ->
         @icedCoffeeEditor = atom.workspace.getActiveTextEditor()
-        selection = @icedCoffeeEditor.getSelection()
+        selection = @icedCoffeeEditor.getLastSelection()
         iced_coffee = selection.getText() || @icedCoffeeEditor.getText()
 
         @view = @getView()
