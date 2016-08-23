@@ -10,10 +10,10 @@ module.exports =
         atom.workspace.open().then (editor) ->
             try
                 output = compile iced_coffee, bare: yes
-                editor.setGrammar atom.syntax.grammarForScopeName 'source.js'
+                editor.setGrammar atom.grammars.grammarForScopeName 'source.js'
             catch e
                 output = e.toString()
-                editor.setGrammar atom.syntax.grammarForScopeName 'text.plain'
+                editor.setGrammar atom.grammars.grammarForScopeName 'text.plain'
             finally
                 editor.setText output
 
